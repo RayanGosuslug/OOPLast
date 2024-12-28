@@ -1,0 +1,12 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    container_name: 'oop8910'
+    ports:
+      - 8088
+    environment:
+      POSTGRES_USER: fedaoop
+      POSTGRES_PASSWORD: 2006
+      POSTGRES_DB: oop
+    volumes:
+      - /Users/feda/Library/Application Support/Postgres/var-16
