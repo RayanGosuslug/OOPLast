@@ -23,7 +23,7 @@ public class Runner implements CommandLineRunner {
         bookService.updateBook(UUID.fromString("8eaaa877-5af8-428e-9f2c-423cb3498792"), "Рассказы", "Реальные");
         System.out.println("обновили книгу");
 
-        bookService.delCarById(UUID.fromString("350f8402-ce8c-486f-a06b-74e029c19036"));
+        bookService.delBookByID(UUID.fromString("350f8402-ce8c-486f-a06b-74e029c19036"));
         System.out.println("Удалили книгу");
     }
 }

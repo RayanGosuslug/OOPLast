@@ -3,7 +3,7 @@ services:
     image: 'postgres:latest'
     container_name: 'oop8910'
     ports:
-      - 8088
+      - "5432:5432"
     environment:
       POSTGRES_USER: fedaoop
       POSTGRES_PASSWORD: 2006

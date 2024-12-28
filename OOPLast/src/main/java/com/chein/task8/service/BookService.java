@@ -21,12 +21,12 @@ public class BookService {
     public BookEntity updateBook(UUID book_id, String book_type, String description){
         Optional<BookEntity> bookOpt = bookRepository.findById(book_id);
 
-        BookEntity car = bookOpt.orElse(null);
+        BookEntity book = bookOpt.orElse(addNewBook(book_type, description));
 
-        car.setBook_type(book_type);
-        car.setDescription(description);
+        book.setBook_type(book_type);
+        book.setDescription(description);
 
-        return bookRepository.save(car);
+        return bookRepository.save(book);
     }
 
 
@@ -41,9 +41,9 @@ public class BookService {
     }
 
     @Transactional
-    public void delCarById(UUID car_id){
+    public void delBookByID(UUID book_id){
 
-        bookRepository.deleteById(car_id);
+        bookRepository.deleteById(book_id);
     }
 
 }
